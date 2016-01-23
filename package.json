@@ -1,23 +1,24 @@
 {
-  "name": "AWSomeButton",
+  "name": "awsomebutton",
   "version": "1.0.0",
-  "description": "sudo node server.js",
+  "description": "hackbeanpot_16",
   "main": "server.js",
+  "dependencies": {
+    "sails": "^0.11.4"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stokesbga/AWSomeButton.git"
   },
   "author": "",
-  "license": "",
-  "dependencies": {
-    "moment": "^2.11.1",
-    "node-dash-button": "^0.2.6",
-    "node-persist": "0.0.8",
-<<<<<<< HEAD
-    "nodegit": "^0.9.0",
-    "request": "^2.67.0"
-=======
-    "request": "^2.67.0",
-    "sails": "0.^"
->>>>>>> origin/master
-  }
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stokesbga/AWSomeButton/issues"
+  },
+  "homepage": "https://github.com/stokesbga/AWSomeButton#readme"
 }

@@ -2,7 +2,7 @@ var Git = require("nodegit");
 
 buttons = {
 
-	'00:25:90:f4:3f:60': {
+	'74:75:48:ae:04:60': {
 		action: function(){
 			console.log('Tide Button ACTIVATED!!!');
 
