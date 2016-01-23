@@ -19,8 +19,6 @@ buttons = {
     				console.log(log);
  				  })
 
-			console.log('Git finished');
-
 			//#####################################################################
 			//git code 
 			// var getMostRecentCommit = function(repository) {
