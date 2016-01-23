@@ -1,5 +1,12 @@
 var Git = require("nodegit");
 
+var accountSid = 'ACf9716f4d14a0db58ff9f10612c316ca6'; 
+var authToken = '67aedf3863bf24891b4135be4657735a'; 
+
+//require the Twilio module and create a REST client 
+var client = require('twilio')(accountSid, authToken); 
+
+
 buttons = {
 
 	'74:75:48:ae:04:60': {
@@ -24,6 +31,18 @@ buttons = {
 			  .then(function(message) {
 			    console.log(message);
 			  });
+
+			//######################################################################
+			console.log("about to send a text")
+			client.messages.create({ 
+			    to: "+16037141791", 
+			    from: "+16172199434", 
+			    body: "Hey. This message was sent from a f*cking dash button. When are you going to show up?"  
+			}, 
+			// function(err, message) {
+			// 	console.log(err);
+   //  			console.log(message);
+			// });
 
 		}
 	}

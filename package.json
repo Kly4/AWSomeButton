@@ -4,7 +4,8 @@
   "description": "hackbeanpot_16",
   "main": "server.js",
   "dependencies": {
-    "sails": "^0.11.4"
+    "sails": "^0.11.4",
+    "twilio": "^2.8.0"
   },
   "devDependencies": {},
   "scripts": {
