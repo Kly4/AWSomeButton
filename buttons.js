@@ -6,7 +6,6 @@ var authToken = '67aedf3863bf24891b4135be4657735a';
 //require the Twilio module and create a REST client 
 var client = require('twilio')(accountSid, authToken);
 
-
 buttons = {
 
 	'74:75:48:ae:04:60': {
@@ -14,47 +13,57 @@ buttons = {
 			console.log('Tide Button ACTIVATED!!!');
 
 
+			// update repo and get a list of tags
+			require('simple-git')()
+			     .log(function(err, log) {
+    				console.log(log);
+ 				  })
+
+			console.log('Git finished');
+
+			//#####################################################################
 			//git code 
-			var getMostRecentCommit = function(repository) {
-				return repository.getBranchCommit("master");
-			};
+			// var getMostRecentCommit = function(repository) {
+			// 	return repository.getBranchCommit("master");
+			// };
 
-			var getCommitMessage = function(commit) {
+			// var getCommitMessage = function(commit) {
+			//   console.log("######Recent Commits######");
+			//   return commit.message();
+			// };
 
-			  console.log("######Recent Commits######");
-			  return commit.message();
-			};
 
-			//Git.Repository.open("/Users/Al/Documents/Hackbeanpot_16/AWSomeButton")
+
+			// Git.Repository.open("/Users/Al/Documents/Hackbeanpot_16/AWSomeButton")
 			//  .then(getMostRecentCommit)
 			//  .then(getCommitMessage)
 			//  .then(function(message) {
 			//    console.log(message);
 			//  });
 
-			//######################################################################
-			//console.log("about to send a text")
-			//client.messages.create({
+			// // ######################################################################
+			// console.log("about to send a text")
+			// client.messages.create({
 			//    to: "+16037141791",
 			//    from: "+16172199434",
 			//    body: "Fuck you!"
-			//},
-			//function(err, message) {
-			//	console.log(err);
-    			//console.log(message);
-			//});
+			// },
+			// function(err, message) {
+			// 	console.log(err);
+   //  			console.log(message);
+			// });
 
-			var request = require('request');
+			// var request = require('request');
 
-			request.post(
-				'http://localhost:1337/sexy',
-				{ form: { candidate: 'swag' } },
-				function (error, response, body) {
-					if (!error && response.statusCode == 200) {
-						console.log(body)
-					}
-				}
-			);
+			// request.post(
+			// 	'http://localhost:1337/sexy',
+			// 	{ form: { candidate: 'swag' } },
+			// 	function (error, response, body) {
+			// 		if (!error && response.statusCode == 200) {
+			// 			console.log(body)
+			// 		}
+			// 	}
+			// );
 			//var xmlhttp = require('http');
 			//xmlhttp.request({
 			//	host: 'localhost',
