@@ -4,10 +4,7 @@
     <list default="true" id="4b580682-13dc-4cda-918b-0e2ac7c3f884" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ballot2016/api/controllers/VoteController.js" afterPath="$PROJECT_DIR$/ballot2016/api/controllers/VoteController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ballot2016/assets/js/smaht.js" afterPath="$PROJECT_DIR$/ballot2016/assets/js/smaht.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ballot2016/config/blueprints.js" afterPath="$PROJECT_DIR$/ballot2016/config/blueprints.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ballot2016/config/routes.js" afterPath="$PROJECT_DIR$/ballot2016/config/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ballot2016/views/homepage.ejs" afterPath="$PROJECT_DIR$/ballot2016/views/homepage.ejs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/buttons.js" afterPath="$PROJECT_DIR$/buttons.js" />
     </list>
     <ignored path="awsomebutton.iws" />
@@ -30,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="VoteController.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VoteController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ballot2016/api/controllers/VoteController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2238806">
-              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
               <folding>
                 <element signature="e#0#41#0" expanded="false" />
               </folding>
@@ -45,18 +42,20 @@
       <file leaf-file-name="buttons.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/buttons.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.925926">
-              <caret line="71" column="38" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
-              <folding />
+            <state vertical-scroll-proportion="-7.4814816">
+              <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+              <folding>
+                <marker date="1453580754810" expanded="true" signature="1427:1621" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="smaht.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="smaht.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ballot2016/assets/js/smaht.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.57569295">
+              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -75,8 +74,8 @@
       <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ballot2016/config/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.481482">
-              <caret line="44" column="10" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
+            <state vertical-scroll-proportion="-7.4814816">
+              <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -118,10 +117,10 @@
         <option value="$PROJECT_DIR$/ballot2016/views/layout.ejs" />
         <option value="$PROJECT_DIR$/ballot2016/assets/styles/style.css" />
         <option value="$PROJECT_DIR$/ballot2016/config/blueprints.js" />
-        <option value="$PROJECT_DIR$/ballot2016/api/controllers/VoteController.js" />
         <option value="$PROJECT_DIR$/ballot2016/views/homepage.ejs" />
-        <option value="$PROJECT_DIR$/ballot2016/config/routes.js" />
         <option value="$PROJECT_DIR$/ballot2016/assets/js/smaht.js" />
+        <option value="$PROJECT_DIR$/ballot2016/api/controllers/VoteController.js" />
+        <option value="$PROJECT_DIR$/ballot2016/config/routes.js" />
         <option value="$PROJECT_DIR$/buttons.js" />
       </list>
     </option>
@@ -193,6 +192,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ballot2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="awsomebutton" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="awsomebutton" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ballot2016" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -23008,7 +23025,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453576896427</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="sails app changed&#10;">
+      <created>1453579072572</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1453579072572</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -23154,35 +23177,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ballot2016/config/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.481482">
-          <caret line="44" column="10" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ballot2016/assets/js/smaht.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/buttons.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.925926">
-          <caret line="71" column="38" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
+        <state vertical-scroll-proportion="-7.4814816">
+          <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ballot2016/api/controllers/VoteController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2238806">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
           <folding>
             <element signature="e#0#41#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buttons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.4814816">
+          <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+          <folding>
+            <marker date="1453580754810" expanded="true" signature="1427:1621" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ballot2016/assets/js/smaht.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57569295">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>

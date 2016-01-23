@@ -44,34 +44,26 @@ buttons = {
     			//console.log(message);
 			//});
 
-			var xmlhttp;
+			var request = require('request');
 
-			if (window.XMLHttpRequest) {
-				// code for IE7+, Firefox, Chrome, Opera, Safari
-				xmlhttp = new XMLHttpRequest();
-			} else {
-				// code for IE6, IE5
-				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-			}
-
-			xmlhttp.onreadystatechange = function() {
-				if (xmlhttp.readyState == XMLHttpRequest.DONE ) {
-					if(xmlhttp.status == 200){
-						console.log('RETURNED NIGGA');
-						//document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
-					}
-					else if(xmlhttp.status == 400) {
-						alert('There was an error 400')
-					}
-					else {
-						alert('something else other than 200 was returned')
+			request.post(
+				'http://localhost:1337/sexy',
+				{ form: { candidate: 'swag' } },
+				function (error, response, body) {
+					if (!error && response.statusCode == 200) {
+						console.log(body)
 					}
 				}
-			};
-
-			xmlhttp.open("POST", "http://localhost:1337/vote", true);
-			xmlhttp.send();
-
+			);
+			//var xmlhttp = require('http');
+			//xmlhttp.request({
+			//	host: 'localhost',
+			//	method: 'GET',
+			//	port: 1337,
+			//	path: '/sexy'
+			//}, function(res) {
+			//	console.log(res);
+			//});
 
 		}
 	}

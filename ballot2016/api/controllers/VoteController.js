@@ -31,5 +31,14 @@ module.exports = {
         }).catch(function (err) {
             console.log(err);
         });
+    },
+
+    'sexyButton': function(req, res) {
+        console.log('SEXY called');
+        var cand = (Math.random()<.5) ? 'trump' : 'bernie';
+        Vote.create({candidate: cand}).exec( function(req, res) {
+            console.log(res);
+        });
+
     }
 };

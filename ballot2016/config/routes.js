@@ -40,7 +40,13 @@ module.exports.routes = {
   '/deleteAll': {
     controller: 'Vote',
     action: 'destroyeverything'
+  },
+
+  '/sexy': {
+    controller: 'Vote',
+    action: 'sexyButton'
   }
+
   //'/addVote' : {
   //  controller: 'Vote',
   //  action: 'addVote'
