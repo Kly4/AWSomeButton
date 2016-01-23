@@ -34,12 +34,12 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  },
-
-  '/addVote' : {
-    controller: 'Vote',
-    action: 'addVote'
   }
+
+  //'/addVote' : {
+  //  controller: 'Vote',
+  //  action: 'addVote'
+  //}
 
   /***************************************************************************
   *                                                                          *

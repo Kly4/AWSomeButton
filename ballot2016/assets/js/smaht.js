@@ -1,26 +1,61 @@
 /**
  * Created by stokesa on 1/23/16.
  */
-io.socket.on('vote', function(msg){
+var totalVotes = 1, trumpVotes = 0, bernieVotes = 0;
 
-    console.log("OMG VOTE RECIEVED");
-    console.log(msg);
-    //io.socket.get('/addVote', function(data, jwr){
-    //    if (jwr.statusCode == 200){
-    //        io.socket.on(data.room,function(obj){
-    //            console.log(obj);
-    //        });
-    //    } else {
-    //        console.log(jwr);
-    //    }
-    //});
+io.socket.on('vote', function(msg){
+    console.log('vote recieved');
+    if (msg.verb == 'created'){
+        console.log(msg.data);
+        console.log('hi');
+    }
 });
+
+// load initial
+io.socket.get('/vote', {}, function(data, jwr){
+    if (jwr.statusCode == 200){
+        console.log('INIT: ' + data.length);
+    } else {
+        console.log('ERROR: ' + jwr.statusCode);
+    }
+});
+
 
 
 $('#vote').on('click', function() {
-    io.socket.request({
-        method: 'get',
-        url: '/addVote',
-        params: {candidate: 'trump'}
-    })
+
+    var cand = (Math.random()<.5) ? 'trump' : 'bernie';
+    io.socket.post('/vote', {candidate: cand}, function(data, jwr){
+        if (jwr.statusCode == 201){
+            addUser(cand);
+           // console.log(data);
+        } else {
+            console.log('ERROR: ' + jwr.statusCode);
+        }
+    });
 });
+
+
+function addUser(pres) {
+    totalVotes++;
+    if(pres === 'trump')
+        trumpVotes++;
+    else
+        bernieVotes++;
+
+    var bPer = bernieVotes/totalVotes, tPer = 0.99 - bPer;
+    bPer *= 100;
+    tPer *= 100;
+    bPer = bPer.toFixed(0);
+    tPer = tPer.toFixed(0);
+
+    console.log('bernie at: ' + bPer + '%');
+
+    $('#bernie-num').text(bPer + '%');
+    $('#trump-num').text(tPer + '%');
+
+    $('.red').css({width: tPer + "%"});
+    $('.blue').css({width: bPer + "%"});
+
+
+}
