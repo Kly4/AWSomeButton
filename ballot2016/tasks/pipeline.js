@@ -32,7 +32,10 @@ var jsFilesToInject = [
 
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
-  'js/**/*.js',
+  'js/jquery-1.12.0.min.js',
+  'js/bootstrap.min.js',
+  'js/dependencies/sails.io.js',
+  'js/smaht.js'
 
   // Use the "exclude" operator to ignore files
   // '!js/ignore/these/files/*.js'
