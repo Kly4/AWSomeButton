@@ -10,5 +10,7 @@ module.exports = {
 
         console.log('Adding vote for: ' + cand);
 
+
+
     }
 };
