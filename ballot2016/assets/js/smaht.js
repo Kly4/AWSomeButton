@@ -3,12 +3,9 @@
  */
 var totalVotes = 1, trumpVotes = 0, bernieVotes = 0;
 
-io.socket.on('vote', function(msg){
-    console.log('vote recieved');
-    if (msg.verb == 'created'){
-        console.log(msg.data);
-        console.log('hi');
-    }
+io.socket.on('voteAdded', function(msg){
+    console.log('vote recieved for: ' + msg.candidate);
+    addUser(msg.candidate);
 });
 
 // load initial
@@ -23,6 +20,19 @@ io.socket.get('/vote', {}, function(data, jwr){
         console.log('ERROR: ' + jwr.statusCode);
     }
 });
+// subscribe to future updates by joining room
+io.socket.get('/joinRoom', {}, function(data, jwr){
+    if (jwr.statusCode == 200){
+        console.log('JOINING ROOM');
+        for(var i = 0; i<data.length; i++) {
+            var cand = data[i].candidate;
+            addUser(cand);
+        }
+    } else {
+        console.log('ERROR: ' + jwr.statusCode);
+    }
+});
+
 
 
 
@@ -47,8 +57,18 @@ $('#reset').on('click', function() {
             console.log(res);
         }
     });
+
 });
 
+$('#voteR').on('click', function() {
+    $.ajax({
+        method: 'POST',
+        url: '/sexy',
+        success: function(res) {
+            console.log(res);
+        }
+    });
+});
 
 function addUser(pres) {
     totalVotes++;
@@ -57,11 +77,7 @@ function addUser(pres) {
     else
         bernieVotes++;
 
-    var bPer = bernieVotes/totalVotes, tPer = 0.99 - bPer;
-    bPer *= 100;
-    tPer *= 100;
-    bPer = bPer.toFixed(0);
-    tPer = tPer.toFixed(0);
+    var bPer = ((bernieVotes/totalVotes) * 100).toPrecision(2), tPer = 100 - bPer;
 
     console.log('bernie at: ' + bPer + '%');
 

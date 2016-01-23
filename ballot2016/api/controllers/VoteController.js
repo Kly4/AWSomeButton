@@ -2,6 +2,7 @@
  * Created by stokesa on 1/23/16.
  */
 
+var socket, io = sails.io;
 
 module.exports = {
 
@@ -37,8 +38,15 @@ module.exports = {
         console.log('SEXY called');
         var cand = (Math.random()<.5) ? 'trump' : 'bernie';
         Vote.create({candidate: cand}).exec( function(req, res) {
-            console.log(res);
+            sails.sockets.broadcast('votingRoom','voteAdded',{candidate: cand});
         });
 
+    },
+
+    'joinVotingRoom': function(req, res) {
+        socket = req.socket;
+        sails.sockets.join(socket,'votingRoom');
     }
+
+
 };

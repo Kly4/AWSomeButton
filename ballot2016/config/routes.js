@@ -33,7 +33,8 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    view: 'homepage'
+    controller: 'Vote',
+    action: 'default'
   },
 
 
@@ -45,7 +46,13 @@ module.exports.routes = {
   '/sexy': {
     controller: 'Vote',
     action: 'sexyButton'
+  },
+
+  '/joinRoom': {
+    controller: 'Vote',
+    action: 'joinVotingRoom'
   }
+
 
   //'/addVote' : {
   //  controller: 'Vote',
