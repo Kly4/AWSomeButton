@@ -7,7 +7,7 @@ module.exports = {
 
     'default': function(req, res) {
         res.view('homepage');
-    }
+    },
 
     //'addVote': function(req, res) {
     //    var cand = req.param('candidate');
@@ -23,4 +23,13 @@ module.exports = {
     //        room: voteCount
     //    });
     //}
+
+
+    'destroyeverything': function(req, res) {
+        Vote.destroy({candidate: ['trump', 'bernie']}).then(function (result) {
+            console.log(result);
+        }).catch(function (err) {
+            console.log(err);
+        });
+    }
 };

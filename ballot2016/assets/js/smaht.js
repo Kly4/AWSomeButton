@@ -15,6 +15,10 @@ io.socket.on('vote', function(msg){
 io.socket.get('/vote', {}, function(data, jwr){
     if (jwr.statusCode == 200){
         console.log('INIT: ' + data.length);
+        for(var i = 0; i<data.length; i++) {
+            var cand = data[i].candidate;
+            addUser(cand);
+        }
     } else {
         console.log('ERROR: ' + jwr.statusCode);
     }
@@ -31,6 +35,16 @@ $('#vote').on('click', function() {
            // console.log(data);
         } else {
             console.log('ERROR: ' + jwr.statusCode);
+        }
+    });
+});
+
+$('#reset').on('click', function() {
+    $.ajax({
+        method: 'POST',
+        url: '/deleteAll',
+        success: function(res) {
+            console.log(res);
         }
     });
 });

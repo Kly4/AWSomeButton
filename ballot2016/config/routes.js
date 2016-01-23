@@ -34,8 +34,13 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
 
+
+  '/deleteAll': {
+    controller: 'Vote',
+    action: 'destroyeverything'
+  }
   //'/addVote' : {
   //  controller: 'Vote',
   //  action: 'addVote'
