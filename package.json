@@ -12,7 +12,12 @@
     "moment": "^2.11.1",
     "node-dash-button": "^0.2.6",
     "node-persist": "0.0.8",
+<<<<<<< HEAD
     "nodegit": "^0.9.0",
     "request": "^2.67.0"
+=======
+    "request": "^2.67.0",
+    "sails": "0.^"
+>>>>>>> origin/master
   }
 }

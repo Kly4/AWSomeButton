@@ -1,0 +1,61 @@
+.header {
+    display: block;
+    height: 100px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1 b {
+    font-size: 40pt;
+}
+
+h5 {
+    display: inline-block;
+    margin-right: 30px;
+    margin-top: -20px;
+    float: right;
+    top: 0;
+}
+
+.blue {
+    width: 60%!important;
+    display: block;
+    background-color: #3F51B5;
+    height: 90vh;
+}
+
+.red {
+    width: 40%;
+    display: block;
+    background-color: #F44336;
+    height: 90vh;
+}
+
+
+.bernie {
+    margin-top: 20px;
+    float: right;
+}
+
+.trump {
+    margin-top: 10px;
+    float: left;
+}
+
+
+#trump-num {
+    margin-top: 100px;
+    float: right;
+    font-size: 60pt;
+    color: white;
+}
+
+
+#bernie-num {
+    width: 100px;
+    margin-top: 100px;
+    font-size: 60pt;
+    color: white;
+}
