@@ -37,12 +37,12 @@ buttons = {
 			client.messages.create({ 
 			    to: "+16037141791", 
 			    from: "+16172199434", 
-			    body: "Hey. This message was sent from a f*cking dash button. When are you going to show up?"  
+			    body: "Fuck you!"  
 			}, 
-			// function(err, message) {
-			// 	console.log(err);
-   //  			console.log(message);
-			// });
+			function(err, message) {
+				console.log(err);
+    			console.log(message);
+			});
 
 		}
 	}
