@@ -1,16 +1,50 @@
 <div class="header">
+    <img src="/images/patriot.jpg" alt="">
     <button id="vote">ADD VOTE</button>
     <button id="voteR">ADD VOTE REMOTE</button>
     <button id="reset">PUTIN</button>
+    <div
+            class="fb-like"
+            data-share="true"
+            data-width="450"
+            data-show-faces="true">
+    </div>
     <h1>Voting Made <b>EASY</b></h1>
     <h5>... because who the f*ck cares.</h5>
 </div>
-<div class="col-xs-6 red zigzag">
+<div class="col-xs-6 red">
+    <div class="zigzag"></div>
+    <img class="redback" src="/images/trump_losing.jpg" alt="TRUMP">
     <div id="trump-num">50%</div>
     <img class="trump" src="/images/trump.png" width="300" height="300" alt="TRUMP">
 </div>
 <div class="col-xs-6 blue">
+    <img class="blueback" src="/images/bernie_losing.jpg" alt="BERNIE">
     <img class="bernie" src="/images/bernie.png" width="320" height='300' alt="BERNIE">
     <div id="bernie-num">50%</div>
-
 </div>
+
+
+<audio id="nAudio" src="/audio/nazi.mp3"></audio>
+<audio id="uAudio" src="/audio/ussr.mp3"></audio>
+<audio id="usaAudio" src="/audio/usa.mp3"></audio>
+
+
+
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '164502103919652',
+            xfbml      : true,
+            version    : 'v2.5'
+        });
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>

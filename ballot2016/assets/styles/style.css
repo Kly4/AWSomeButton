@@ -1,14 +1,46 @@
+
+@font-face {
+    font-family: american;
+    src: url('../fonts/american.ttf');
+}
+
+
+@font-face {
+    font-family: dream;
+    src: url('../fonts/dream.TTF');
+}
+
+@font-face {
+    font-family: election;
+    src: url('../fonts/election.ttf');
+}
+
 .header {
     display: block;
     height: 100px;
 }
 
+.header img {
+    z-index: -1;
+    width: 100%;
+    position: absolute;
+    opacity: 0.4;
+}
+
+
 h1 {
+    margin-top: -20px;
+    font-size: 40pt;
+    font-family: dream;
     text-align: center;
 }
 
 h1 b {
-    font-size: 40pt;
+    color: #fff15a;
+    text-shadow: 4px 4px black;
+    font-family: election;
+    margin-top: 20px;
+    font-size: 60pt;
 }
 
 h5 {
@@ -20,24 +52,48 @@ h5 {
 }
 
 .blue {
+    position: absolute;
+    right: 0;
     width: 50%;
     display: block;
     background-color: #3F51B5;
-    height: 90vh;
+    height: 80vh;
+    z-index: 2;
+}
+
+.blueback {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: -1;
 }
 
 .red {
+    position: absolute;
     width: 50%;
     display: block;
-    background-color: #F44336;
-    height: 90vh;
+    background-color: #ec173a;
+    height: 80vh;
+    z-index: 1;
+    box-shadow: inset 0 0 40px 40px #ec173a;
+}
+
+
+
+.redback {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    z-index: -1;
 }
 
 
 .bernie {
     position: absolute;
     margin-top: 20px;
-    float: right;
+    right: 20px;
 }
 
 .trump {
@@ -49,26 +105,47 @@ h5 {
 
 #trump-num {
     margin-top: 400px;
+    text-shadow: 4px 4px #232323;
     float: right;
     font-size: 60pt;
     color: white;
+    z-index: 999;
 }
 
 
 #bernie-num {
     width: 100px;
+    text-shadow: 4px 4px #232323;
     margin-top: 400px;
+    margin-left: 20px;
     font-size: 60pt;
     color: white;
+    z-index: 999;
 }
 
 .zigzag { /* Vertical */
+    margin-right: 13px;
+    height: 100%;
+    width: 20px;
+    float: right;
     background:
-            linear-gradient(45deg, #ec173a 15px, transparent 0) 0 30px,
+            linear-gradient(45deg, #ec173a 15px, transparent 0) 0 40px,
             linear-gradient(135deg, #ec173a 15px, #3F51B5 0) 0 30px;
-    z-index: 999;
+    z-index: 10;
     background-color: #ec173a;
     background-position: right top;
     background-repeat: repeat-y;
     background-size: 20px 40px;
+}
+
+canvas {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    -webkit-transform: translateZ(0);
+    z-index: 999;
+}
+
+#library {
+    display: none;
 }

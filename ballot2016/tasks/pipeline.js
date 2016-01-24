@@ -35,7 +35,9 @@ var jsFilesToInject = [
   'js/jquery-1.12.0.min.js',
   'js/bootstrap.min.js',
   'js/dependencies/sails.io.js',
-  'js/smaht.js'
+  'js/smaht.js',
+  'js/fireworks.js'
+
 
   // Use the "exclude" operator to ignore files
   // '!js/ignore/these/files/*.js'

@@ -51,7 +51,8 @@ module.exports.routes = {
   '/joinRoom': {
     controller: 'Vote',
     action: 'joinVotingRoom'
-  }
+  },
+
 
 
   //'/addVote' : {
