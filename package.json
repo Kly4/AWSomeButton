@@ -5,6 +5,7 @@
   "main": "server.js",
   "dependencies": {
     "sails": "^0.11.4",
+    "simple-git": "^1.21.0",
     "twilio": "^2.8.0"
   },
   "devDependencies": {},
