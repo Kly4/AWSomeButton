@@ -13,65 +13,50 @@ buttons = {
 			console.log('Tide Button ACTIVATED!!!');
 
 
-			// update repo and get a list of tags
-			require('simple-git')()
-			     .log(function(err, log) {
-    				console.log(log);
- 				  })
+			// // update repo and get a list of tags
+			// require('simple-git')()
+			//      .log(function(err, log) {
+   //  				console.log(log);
+ 		// 		  })
 
 			//#####################################################################
 			//git code 
-			// var getMostRecentCommit = function(repository) {
-			// 	return repository.getBranchCommit("master");
-			// };
+			var getMostRecentCommit = function(repository) {
+				return repository.getBranchCommit("master");
+			};
 
-			// var getCommitMessage = function(commit) {
-			//   console.log("######Recent Commits######");
-			//   return commit.message();
-			// };
+			var getCommitMessage = function(commit) {
+			  console.log("############################");
+			  console.log("###### Recent Commits ######");
+			  console.log("############################");
+			  return commit.message();
+			};
 
 
 
-			// Git.Repository.open("/Users/Al/Documents/Hackbeanpot_16/AWSomeButton")
-			//  .then(getMostRecentCommit)
-			//  .then(getCommitMessage)
-			//  .then(function(message) {
-			//    console.log(message);
-			//  });
+			Git.Repository.open("/Users/Al/Documents/Hackbeanpot_16/AWSomeButton")
+			 .then(getMostRecentCommit)
+			 .then(getCommitMessage)
+			 .then(function(message) {
+			   console.log(message);
+			 });
 
 			// // ######################################################################
-			// console.log("about to send a text")
-			// client.messages.create({
-			//    to: "+16037141791",
-			//    from: "+16172199434",
-			//    body: "Fuck you!"
-			// },
-			// function(err, message) {
-			// 	console.log(err);
-   //  			console.log(message);
-			// });
 
-			// var request = require('request');
 
-			// request.post(
-			// 	'http://localhost:1337/sexy',
-			// 	{ form: { candidate: 'swag' } },
-			// 	function (error, response, body) {
-			// 		if (!error && response.statusCode == 200) {
-			// 			console.log(body)
-			// 		}
-			// 	}
-			// );
-			//var xmlhttp = require('http');
-			//xmlhttp.request({
-			//	host: 'localhost',
-			//	method: 'GET',
-			//	port: 1337,
-			//	path: '/sexy'
-			//}, function(res) {
-			//	console.log(res);
-			//});
+		}
+	},
 
+	'74:c2:46:a9:6f:52': {
+		action: function(){
+			console.log('Finish Button ACTIVATED!!!');
+
+			console.log("about to send a text")
+			client.messages.create({
+			   to: "+16038674718",
+			   from: "+16172199434",
+			   body: "Yo! THERE'S A PACKAGE OUTSIDE YOUR DOOR FROM UPS! OMG GO GET IT! #AWSomeButton"
+			});
 		}
 	}
 };
