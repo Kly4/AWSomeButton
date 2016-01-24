@@ -2,6 +2,10 @@
  * Created by stokesa on 1/23/16.
  */
 var totalVotes = 1, trumpVotes = 0, bernieVotes = 0, trumpNBernie = 1;
+var winningTrump = '../images/trump_winning.png', defaultTrump = '../images/trump.png',
+    losingTrump = '../images/trump_losing.png';
+var winningBernie = '../images/bernie_winning.png', defaultBernie ='../images/bernie.png',
+    losingBernie = '../images/bernie_losing.png';
 // 0 - trump, 1 - even, 2 - bernie
 
 
@@ -60,6 +64,8 @@ $('#reset').on('click', function() {
         }
     });
 
+    location.reload();
+
 });
 
 $('#voteR').on('click', function() {
@@ -93,6 +99,19 @@ function addUser(pres) {
         if(trumpNBernie !== 2) {
             $('.blue').fireworks();
             $('.red').fireworks('destroy');
+
+            // Pics
+            $('.trump').attr('src', losingTrump);
+            $('.redback').attr('src', losingTrump);
+            $('.bernie').attr('src', winningBernie);
+            $('.blueback').attr('src', winningBernie);
+            $('.trump').fadeIn(2000);
+            $('.redback').fadeIn(2000);
+            $('.bernie').fadeIn(2000);
+            $('.blueback').fadeIn(2000);
+
+
+
             trumpNBernie = 2;
         }
 
@@ -103,10 +122,17 @@ function addUser(pres) {
     }
     else if (tPer > bPer){
 
+        // SET ALL TRUMP WINNING
         if(trumpNBernie !== 0) {
             $('.red').css('z-index', 1);
             $('.red').fireworks();
             $('.blue').fireworks('destroy');
+
+            // Pics
+            $('.trump').attr('src', winningTrump);
+            $('.redback').attr('src', winningTrump);
+            $('.bernie').attr('src', losingBernie);
+            $('.blueback').attr('src', losingBernie);
             trumpNBernie = 0;
         }
 
@@ -122,6 +148,13 @@ function addUser(pres) {
         $('#uAudio')[0].pause();
         $('#nAudio')[0].pause();
         $('#usaAudio')[0].play();
+
+        // Pics
+        $('.trump').attr('src', defaultTrump);
+        $('.redback').attr('src', defaultTrump);
+        $('.bernie').attr('src', defaultBernie);
+        $('.blueback').attr('src', defaultBernie);
+
     }
 
 
